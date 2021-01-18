@@ -6,9 +6,9 @@ name: 自动打卡
 
 on:
   push:
-    branches: [ master ]
+    branches: [ ForWorkflow ]
   pull_request:
-    branches: [ master ]
+    branches: [ ForWorkflow ]
   schedule:
     - cron: 30 17,18 0 0 0
   # Allows you to run this workflow manually from the Actions tab
