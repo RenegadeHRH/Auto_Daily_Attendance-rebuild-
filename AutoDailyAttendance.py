@@ -150,7 +150,7 @@ def GetBaseInfo_json(DWN:DataWeNeed):
                 if len(content) == 0:
                     raise FileNotFoundError
                 content_json = json.loads(content)
-                content_json["submit_time"] = datetime.date.today().__str__()
+                content_json["submit_time"] = datetime.date.today(days=1).__str__()
                 flag = False
         except FileNotFoundError:
             with open('baseInfo'+userID+'.json', 'w', encoding='utf8') as f:
