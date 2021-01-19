@@ -44,8 +44,6 @@ def getRawResonse():
     url = 'https://cas.dgut.edu.cn/home/Oauth/getToken/appid/illnessProtectionHome/state/home.html'
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36",
-        'username': userID,
-        'password': passwd
     }
     response = requests.get(url=url, headers=headers)
     print('在', sys._getframe().f_code.co_name, "函数的response状态:\n", response)
