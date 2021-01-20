@@ -161,19 +161,19 @@ def GetBaseInfo_json(DWN:DataWeNeed):
 def AutoDaily_Attendance(DWN:DataWeNeed):
     url='https://yqfk.dgut.edu.cn/home/base_info/addBaseInfo'
     headers={
-        'Connection':'keep-alive',
+        # 'Connection':'keep-alive',
             "Accept":"application/json" ,
             "'Content-Type":"application/json; charset=utf-8",
           "authorization":DWN.Auth,
-          "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
-          "Origin":"https://yqfk.dgut.edu.cn",
-          "Sec-Fetch-Site":"same-origin",
-          "Sec-Fetch-Mode":"cors",
-          "Sec-Fetch-Dest":"empty",
+          # "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36",
+          # "Origin":"https://yqfk.dgut.edu.cn",
+          # "Sec-Fetch-Site":"same-origin",
+          # "Sec-Fetch-Mode":"cors",
+          # "Sec-Fetch-Dest":"empty",
           "Referer":"https://yqfk.dgut.edu.cn/main",
 
-          "Accept-Language":"zh-CN,zh;q=0.9",
-          "Cookie":"_ga=GA1.3.1085698636.1567594517; PHPSESSID="+DWN.cookies
+          # "Accept-Language":"zh-CN,zh;q=0.9",
+
 }
     data=DWN.baseInfo
     response=requests.post(url,headers=headers,json=data)
