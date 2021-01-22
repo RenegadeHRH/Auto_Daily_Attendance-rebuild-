@@ -178,11 +178,14 @@ def AutoDaily_Attendance(DWN:DataWeNeed):
     data=DWN.baseInfo
     response=requests.post(url,headers=headers,json=data)
     print('在',sys._getframe().f_code.co_name,"函数的response状态:\n",response)
-    print(response.text)
-    while response.text.find("提交") == -1:
-        response = requests.post(url, headers=headers, json=data)
-        print('在', sys._getframe().f_code.co_name, "函数的response状态:\n", response)
-        print(response.text)
+    if response.text.find('提交异常') != -1:
+        times=0
+        while True:
+            response = requests.post(url, headers=headers, json=data)
+            print(response.text)
+            if response.text.find('提交异常') != -1 or times > 50:
+                break
+            times+=1
     print(response.text)
 DWN=DataWeNeed()
 AutoDaily_Attendance(DWN)
