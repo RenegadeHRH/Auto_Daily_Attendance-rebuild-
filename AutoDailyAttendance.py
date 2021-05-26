@@ -35,12 +35,12 @@ if __name__ == '__main__':
     URL2 = "https://cas.dgut.edu.cn/home/Oauth/getToken/appid/illnessProtectionHome/state/home"
     headers2 = {
         "Accept": "application/json, text/javascript, */*; q=0.01",
-        # "X-Requested-With": "XMLHttpRequest",
+        "X-Requested-With": "XMLHttpRequest",
         "User-Agent": UserAgent,
         "Origin": "https://cas.dgut.edu.cn",
-        # "Sec-Fetch-Site": "same-origin",
-        # "Sec-Fetch-Mode": "cors",
-        # "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Dest": "empty",
         "Referer": URL2,
         "Accept-Encoding": "gzip, deflate, br",
         "Accept-Language": "zh-CN,zh;q=0.9",
