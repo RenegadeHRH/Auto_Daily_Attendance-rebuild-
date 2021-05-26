@@ -85,6 +85,7 @@ if __name__ == '__main__':
         offset = datetime.timedelta(days=1)
         CN_Today = (today + offset).__str__()
         data4["submit_time"] = CN_Today
+        print(data4["submit_time"])
         data4 = json.dumps(data4)
         URL4 = 'https://yqfk.dgut.edu.cn/home/base_info/addBaseInfo'
         headers4 = {
@@ -100,4 +101,5 @@ if __name__ == '__main__':
         # 5. 检查是否打卡成功
         response5 = requests.get(url=URL3, headers=headers3)
         baseInfoJson = json.loads(response5.text)
+        print(response4.text)
         print(baseInfoJson["info"]["msg"])
